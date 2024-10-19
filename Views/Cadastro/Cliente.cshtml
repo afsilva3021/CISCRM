@@ -1,0 +1,96 @@
+@{
+    @model List<CRM.Models.Cliente>
+
+    ViewData["Title"] = "Cliente";
+}
+
+
+<div id="main" class="main">
+    <div class="pagetitle">
+        <h1 class="text-center">Cadastro de Cliente</h1>
+        <nav class="d-flex justify-content-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-area="" asp-controller="Home" asp-action="Index">Dashbard</a>
+                </li>
+                <li class="breadcrumb-item">Cadastro</li>
+                <li class="breadcrumb-item active">Cliente</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+    <div class="coantainer">
+        <hr class="border border-primary border-2 opacity-75">
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <button class="btn btn-outline-primary"><i class="bi bi-file-earmark-text-fill"></i> Novo
+                        Cliente </button>
+                </li>
+            </ol>
+        </nav>
+    </div>
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title h1">Cliente</h5>
+                        <!-- Table with stripped rows -->
+                        <table class="table datatable">
+                            <thead>
+                                <tr>
+                                    <th class="col-1">Nome</th>
+                                    <th class="col-1">CNPJ / CPF</th>
+                                    <th class="col-1">Ativo</th>
+                                    <th class="col-1">RazaoSocial</th>
+                                    <th class="col-1">Fantasia</th>
+                                    <th class="col-1">Ei / Rg</th>
+                                    <th class="col-1">Nacionalidade</th>
+                                    <th class="col-1">DataDeNascionalidade</th>
+                                    <th class="col-1">Municipal</th>
+                                    <th class="col-1">DataCadastrada</th>
+                                    <th class="col-1">Cep</th>
+                                    <th class="col-1">Endereco</th>
+                                    <th class="col-1">Complemento</th>
+                                    <th class="col-1">Numero</th>
+                                    <th>Alterar</th>
+                                    <th>Deletar</th>
+                                </tr>
+                            </thead>
+                            <tbody class="container">
+                                @foreach (var cliente in Model)
+                                {
+                                    <tr>
+                                        <td>@cliente.Nome</td>
+                                        <td>@cliente.CNPJ </td>
+                                        <td>@cliente.Ativo</td>
+                                        <td>@cliente.RazaoSocial</td>
+                                        <td>@cliente.Fantasia</td>
+                                        <td>@cliente.EiRg</td>
+                                        <td>@cliente.Nacionalidade</td>
+                                        <td>@cliente.DataDeNascionalidade</td>
+                                        <td>@cliente.Municipal</td>
+                                        <td>@cliente.DataCadastrada</td>
+                                        <td>@cliente.Cep</td>
+                                        <td>@cliente.Endereco</td>
+                                        <td>@cliente.Complemento</td>
+                                        <td>@cliente.Numero</td>
+                                        <td>
+                                            <Button class="btn btn-outline-warning"><i
+                                                    class="bi bi-file-earmark-bar-graph-fill"></i> Alterar</Button>
+                                        </td>
+                                        <td>
+                                            <Button class="btn btn-outline-danger"><i class="bi bi-trash-fill"></i>
+                                                Deletar</Button>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <!-- End Table with stripped rows -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div><!-- End #main -->

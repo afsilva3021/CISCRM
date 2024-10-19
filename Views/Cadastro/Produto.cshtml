@@ -1,5 +1,8 @@
-﻿@{
-  @model List<CRM.Models.Produto>
+@{
+
+    @model List<CRM.Models.Produto>
+
+    ViewData["Title"] = "Produtos";
 }
 
 
@@ -16,6 +19,7 @@
         </nav>
     </div><!-- End Page Title -->
     <div class="coantainer-fluid">
+        <hr class="border border-primary border-2 opacity-75">
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
@@ -32,25 +36,18 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Datatables</h5>
-                        <p>Add lightweight datatables to your project with using the <a
-                                href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple
-                                DataTables</a> library. Just add <code>.datatable</code> class name to any table you
-                            wish to conver to a datatable. Check for <a
-                                href="https://fiduswriter.github.io/simple-datatables/demos/" target="_blank">more
-                                examples</a>.</p>
-
+                        <h5 class="card-title h1">Produtos</h5>
                         <!-- Table with stripped rows -->
                         <table class="table datatable">
                             <thead>
                                 <tr>
                                     <th>
-                                        <b>N</b>ame
+                                        <b>P</b>roduto
                                     </th>
-                                    <th>Ext.</th>
-                                    <th>City</th>
-                                    <th data-type="date" data-format="YYYY/DD/MM">Start Date</th>
-                                    <th>Completion</th>
+                                    <th>Codigo</th>
+                                    <th>Descrição</th>
+                                    <th data-type="date" data-format="YYYY/DD/MM">Data de inclusao</th>
+                                    <th>Valor</th>
                                     <th>Alterar</th>
                                     <th>Deletar</th>
                                 </tr>
@@ -58,15 +55,15 @@
                             <tbody>
                                 @foreach (var produto in Model)
                                 {
-                                    <tr>
-                                        <td>@produto.Nome</td>
-                                        <td>@produto.Codigo</td>
-                                        <td>@produto.Descricao</td>
-                                        <td>@produto.DataLancamento.ToShortDateString()</td>
-                                        <td>R$ @produto.Valor</td>
-                                        <td><Button class="btn btn-outline-warning">Alterar</Button></td>
-                                        <td><Button class="btn btn-outline-danger">Deletar</Button></td>
-                                    </tr>
+                                        <tr>
+                                            <td>@produto.Nome</td>
+                                            <td>@produto.Codigo</td>
+                                            <td class="col-4">@produto.Descricao</td>
+                                            <td>@produto.DataLancamento.ToShortDateString()</td>
+                                            <td>R$ @produto.Valor</td>
+                                            <td><Button class="btn btn-outline-warning">Alterar</Button></td>
+                                            <td><Button class="btn btn-outline-danger">Deletar</Button></td>
+                                        </tr>
                                 }
                             </tbody>
                         </table>

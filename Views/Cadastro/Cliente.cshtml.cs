@@ -6,12 +6,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace CRM.Views.Cadastro;
-
-    public class Produto 
+namespace CRM.Views.Cadastro
+{
+    public class Cliente : PageModel
     {
+        private readonly ILogger<Cliente> _logger;
+
+        public Cliente(ILogger<Cliente> logger)
+        {
+            _logger = logger;
+        }
+
         public void OnGet()
         {
-            
         }
     }
+}

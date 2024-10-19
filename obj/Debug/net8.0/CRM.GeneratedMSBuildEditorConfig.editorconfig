@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\dev\CRM
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/dev/CRM/Views/Cadastro/Cliente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9cQ2xpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/dev/CRM/Views/Cadastro/Produto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FkYXN0cm9cUHJvZHV0by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
